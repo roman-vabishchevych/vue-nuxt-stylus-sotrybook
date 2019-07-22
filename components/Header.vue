@@ -1,25 +1,20 @@
 <template>
-	<header class="header">
+	<div class="header">
 		<h3>{{ title }}</h3>
-		<div v-html="content"></div>
-	</header>
+		<div v-html="content" />
+	</div>
 </template>
 
 <script>
-	export default {
-		props: {
-			title: String,
-			default: 'Unknown title'
-		}
-	}
+export default {
+	props: ['title']
+}
 </script>
 
 <style lang="stylus">
 	@require "../styles/global"
 	.header
-		transform scale(1.2) !important
-		display flex
 		background-color redColor
-		width 10px
-		height @width
+		color white
+		padding 40px
 </style>

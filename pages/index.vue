@@ -1,6 +1,8 @@
 <template>
 	<div class="container">
-		<header />
+		<Header title="Title">
+			Content
+		</Header>
 	</div>
 </template>
 
