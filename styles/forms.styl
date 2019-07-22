@@ -1,0 +1,107 @@
+form
+	width 100%
+
+fieldset
+	padding 0
+	margin 0
+	border 0 none
+	min-width 0
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance none
+	margin 0
+input[type=number]
+	-moz-appearance textfield
+
+.form-control
+	display block
+	width 100%
+	outline 0 none
+	-webkit-appearance none
+	textarea&
+		height auto
+		resize vertical
+
+.error-message
+	display none
+	text-align right
+	.has-error &
+		display block
+
+.radio
+.checkbox
+	position relative
+	&[disabled]
+	&.disabled
+		cursor not-allowed
+		.radio__inner,
+		label
+			cursor not-allowed
+	.radio__inner,
+	label
+		display block
+		margin-bottom 0
+		font-weight normal
+		cursor pointer
+	input
+		position absolute
+		top 0
+		left 0
+		z-index 1
+		width 100%
+		height 100%
+		margin 0
+		opacity 0
+		cursor pointer
+		&+ span
+			position relative
+			display block
+			user-select none
+			transition .2s color ease-in-out
+			&:before
+			&:after
+				content ""
+				position absolute
+			&:before
+				border 1px solid
+				transition .2s background-color ease-in-out, .2s border-color ease-in-out
+			&:after
+				visibility hidden
+				transform scale(1.5)
+				opacity 0
+				transition .2s transform ease-in-out, .2s opacity ease-in-out
+		&:checked + span
+		// &[checked="checked"] + span
+			&:after
+				transform scale(1)
+				opacity 1
+				visibility visible
+	&__badge
+		margin-left 5px
+	&__title
+		preventTextOverflow()
+
+.radio
+	input
+		& + span
+			&:before
+			&:after
+				border-radius 50%
+.checkbox
+	input
+		& + span
+			&:after
+				visibility hidden
+				transform scale(1.5)
+				opacity 0
+				transition .2s transform ease-in-out, .2s opacity ease-in-out
+		&:after
+				border-radius 50%
+.input
+	width 100%
+	height 31px
+	margin-top 10px
+	border none
+	outline none
+	box-shadow 0 1px 0 0 #D8D8D8

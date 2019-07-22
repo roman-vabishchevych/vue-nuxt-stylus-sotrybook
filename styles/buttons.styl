@@ -1,0 +1,95 @@
+.btn
+	display inline-block
+	padding 6px 12px
+	border none
+	border-radius 30px
+	vertical-align middle
+	text-align center
+	white-space nowrap
+	cursor pointer
+	outline none
+	user-select none
+	transition .15s background ease-in-out, .15s color ease-in-out, .15s border ease-in-out
+	truncateString()
+	&:focus
+		outline none
+	a&
+		text-decoration none
+	&.disabled
+	&[disabled]
+		cursor not-allowed
+		opacity .5
+		pointer-events none
+	&_small
+		padding 6px 12px
+	&_big
+		padding 12px 12px
+	&_wide
+		padding 6px 25px
+	&_main
+		font-weight bold
+		color #fff
+		background-color #e91E63
+		text-transform uppercase
+		box-shadow 0 5px 5px rgba(255, 82, 82, 0.1)
+		&:hover
+			background #ff0057
+			box-shadow 0px 7px 10px rgba(255, 82, 82, 0.18)
+		&:active
+			background #d50e52
+			box-shadow 0px 3px 10px rgba(255, 82, 82, 0.44)
+		&-bordered
+			border 1px solid
+	&_block
+		width 100%
+	&_default-bordered
+		color #6F748E
+		border 1px solid
+		text-transform uppercase
+	&_bordered
+		padding 5px 16px
+		box-sizing border-box
+		font-size 14px
+		color #455a64
+		background #f7f7f7
+		border 1px solid #d8d8d8
+		border-radius 30px
+		&:hover
+			background rgba(137, 137, 137, 0.21)
+			border 1px solid #898989
+			&.btn_bordered-green
+				background rgba(67, 160, 71, 0.1)
+				border 1px solid #43a047
+			&.btn_bordered-red
+				background rgba(208, 2, 27, 0.1)
+				border 1px solid #d0021b
+	&_square
+		padding 2px 8px
+		border 1px solid
+		border-radius 2px
+		font-size 12px
+		&:hover
+		&:active
+			color #fff
+		&-green
+			color #43a047
+			border-color #43a047
+			&:hover
+				background rgba(#43a047,.7)
+				border-color rgba(#43a047,.5)
+			&:active
+				background #37923b
+				border-color #37923b
+		&-red
+			color #d0021b
+			border-color #d0021b
+			&:hover
+				background rgba(#d0021b,.7)
+				border-color rgba(#d0021b,.5)
+			&:active
+				background #d0021b
+				border-color #d0021b
+	&__count
+		padding-left 2px
+	&__icon
+		padding-right 3px
