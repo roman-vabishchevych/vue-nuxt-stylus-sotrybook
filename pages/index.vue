@@ -1,15 +1,15 @@
 <template>
 	<div class="container">
-		<logo />
+		<header />
 	</div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Header from '../components/Header.vue'
 
 export default {
 	components: {
-		Logo
+		Header
 	}
 }
 </script>

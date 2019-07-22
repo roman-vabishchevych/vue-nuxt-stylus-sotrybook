@@ -1,17 +1,18 @@
 module.exports = async ({ config, mode }) => {
 
   config.module.rules.push({
-    test: /\.styl$/,
-    use: ['style-loader', 'css-loader', {
-			loader: 'stylus-loader'
-		}],
+    test: /\.styl(us)?$/,
+    use: [
+      'vue-style-loader',
+      'css-loader',
+      'stylus-loader'
+    ]
   });
 
-  // config.module.rules.push({
-  //   test: /stories\/*\.js$/,
-  //   loaders: [require.resolve('@storybook/addon-storysource/loader')],
-  //   enforce: 'pre',
-  // });
+  config.module.rules.push({
+    test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
+    loader: 'url-loader'
+  });
 
   return config;
 };
