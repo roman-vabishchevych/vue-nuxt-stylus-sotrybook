@@ -1,6 +1,3 @@
-const stylusLoaderConfig = require('./configs/stylus.loader.config.js');
-
-
 export default {
   mode: 'universal',
   /*
@@ -54,13 +51,6 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.styl$/,
-        use: ['style-loader', 'css-loader', {
-    			loader: 'stylus-loader',
-    			options: { ...stylusLoaderConfig }
-    		}],
-      });
     }
   }
 }

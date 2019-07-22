@@ -13,5 +13,14 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "indent": [2, "tab"],
+    "no-tabs": 0,
+    "vue/html-indent": ["error", "tab", {
+      "attribute": 1,
+      "baseIndent": 1,
+      "closeBracket": 0,
+      "alignAttributesVertically": false,
+      "ignores": []
+    }]
   }
 }
