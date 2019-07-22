@@ -1,13 +1,18 @@
 <template>
 	<div class="header">
 		<h3>{{ title }}</h3>
-		<div v-html="content" />
+		<slot />
 	</div>
 </template>
 
 <script>
 export default {
-	props: ['title']
+	props: {
+		title: {
+			type: String,
+			default: ''
+		}
+	}
 }
 </script>
 
