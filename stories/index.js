@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
 
+import "../styles/main.styl"
+
 import Header from '../components/Header.vue'
 
 storiesOf('Header', module)
