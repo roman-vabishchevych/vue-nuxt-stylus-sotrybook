@@ -2,6 +2,7 @@
 	<div class="header">
 		<h3>{{ title }}</h3>
 		<slot />
+		<img src="/icon.png">
 	</div>
 </template>
 
